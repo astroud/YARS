@@ -2335,3 +2335,1026 @@ Redirected to http://test.host/user
 Completed in 0.00195 (511 reqs/sec) | DB: 0.00094 (48%) | 302 Found [http://test.host/user/register?user=screen_namenew_screen_namepasswordlong_enough_passwordemailvalid%40example.com]
   [4;35;1mUser Load (0.000188)[0m   [0mSELECT * FROM users WHERE (users.`screen_name` = 'new_screen_name' AND users.`password` = 'long_enough_password') LIMIT 1[0m
   [4;36;1mSQL (0.000523)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.000150)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000089)[0m   [0mBEGIN[0m
+  [4;36;1mUser Columns (0.001750)[0m   [0;1mSHOW FIELDS FROM users[0m
+  [4;35;1mUser Load (0.000506)[0m   [0mSELECT * FROM users WHERE (users.`id` = 1) [0m
+  [4;36;1mUser Load (0.000145)[0m   [0;1mSELECT * FROM users WHERE (users.`id` = 2) [0m
+  [4;35;1mUser Load (0.000320)[0m   [0mSELECT * FROM users WHERE (users.screen_name = 'millikan' AND users.id <> 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.000188)[0m   [0;1mSELECT * FROM users WHERE (users.email = 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaram@example.com' AND users.id <> 1) LIMIT 1[0m
+  [4;35;1mSQL (0.000088)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000057)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.000169)[0m   [0mSELECT * FROM users WHERE (users.`id` = 1) [0m
+  [4;36;1mUser Load (0.000137)[0m   [0;1mSELECT * FROM users WHERE (users.`id` = 2) [0m
+  [4;35;1mUser Load (0.000222)[0m   [0mSELECT * FROM users WHERE (users.screen_name = 'millikan' AND users.id <> 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.000261)[0m   [0;1mSELECT * FROM users WHERE (users.email = 'foobar@example.c' AND users.id <> 1) LIMIT 1[0m
+  [4;35;1mUser Load (0.000197)[0m   [0mSELECT * FROM users WHERE (users.screen_name = 'millikan' AND users.id <> 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.000183)[0m   [0;1mSELECT * FROM users WHERE (users.email = '@example.com' AND users.id <> 1) LIMIT 1[0m
+  [4;35;1mUser Load (0.000181)[0m   [0mSELECT * FROM users WHERE (users.screen_name = 'millikan' AND users.id <> 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.000180)[0m   [0;1mSELECT * FROM users WHERE (users.email = 'f@com' AND users.id <> 1) LIMIT 1[0m
+  [4;35;1mUser Load (0.000222)[0m   [0mSELECT * FROM users WHERE (users.screen_name = 'millikan' AND users.id <> 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.000185)[0m   [0;1mSELECT * FROM users WHERE (users.email = 'foo@bar..com' AND users.id <> 1) LIMIT 1[0m
+  [4;35;1mUser Load (0.000944)[0m   [0mSELECT * FROM users WHERE (users.screen_name = 'millikan' AND users.id <> 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.000211)[0m   [0;1mSELECT * FROM users WHERE (users.email = 'foobar@example.infod' AND users.id <> 1) LIMIT 1[0m
+  [4;35;1mUser Load (0.000206)[0m   [0mSELECT * FROM users WHERE (users.screen_name = 'millikan' AND users.id <> 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.000187)[0m   [0;1mSELECT * FROM users WHERE (users.email = 'foobar.example.com' AND users.id <> 1) LIMIT 1[0m
+  [4;35;1mUser Load (0.000184)[0m   [0mSELECT * FROM users WHERE (users.screen_name = 'millikan' AND users.id <> 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.000181)[0m   [0;1mSELECT * FROM users WHERE (users.email = 'foo,@example.com' AND users.id <> 1) LIMIT 1[0m
+  [4;35;1mUser Load (0.000181)[0m   [0mSELECT * FROM users WHERE (users.screen_name = 'millikan' AND users.id <> 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.000180)[0m   [0;1mSELECT * FROM users WHERE (users.email = 'foo@ex(ample.com' AND users.id <> 1) LIMIT 1[0m
+  [4;35;1mUser Load (0.000181)[0m   [0mSELECT * FROM users WHERE (users.screen_name = 'millikan' AND users.id <> 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.000180)[0m   [0;1mSELECT * FROM users WHERE (users.email = 'foo@example,com' AND users.id <> 1) LIMIT 1[0m
+  [4;35;1mSQL (0.000087)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000067)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.000168)[0m   [0mSELECT * FROM users WHERE (users.`id` = 1) [0m
+  [4;36;1mUser Load (0.000174)[0m   [0;1mSELECT * FROM users WHERE (users.`id` = 2) [0m
+  [4;35;1mUser Load (0.000223)[0m   [0mSELECT * FROM users WHERE (users.screen_name = 'millikan' AND users.id <> 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.000184)[0m   [0;1mSELECT * FROM users WHERE (users.email = 'foo.bar_1-9@baz-quux0.example.com' AND users.id <> 1) LIMIT 1[0m
+  [4;35;1mUser Load (0.000182)[0m   [0mSELECT * FROM users WHERE (users.screen_name = 'millikan' AND users.id <> 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.000173)[0m   [0;1mSELECT * FROM users WHERE (users.email = 'foo.bar_1-9@baz-quux0.example.org' AND users.id <> 1) LIMIT 1[0m
+  [4;35;1mUser Load (0.000187)[0m   [0mSELECT * FROM users WHERE (users.screen_name = 'millikan' AND users.id <> 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.000183)[0m   [0;1mSELECT * FROM users WHERE (users.email = 'foo.bar_1-9@baz-quux0.example.net' AND users.id <> 1) LIMIT 1[0m
+  [4;35;1mUser Load (0.000182)[0m   [0mSELECT * FROM users WHERE (users.screen_name = 'millikan' AND users.id <> 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.000180)[0m   [0;1mSELECT * FROM users WHERE (users.email = 'foo.bar_1-9@baz-quux0.example.edu' AND users.id <> 1) LIMIT 1[0m
+  [4;35;1mUser Load (0.000246)[0m   [0mSELECT * FROM users WHERE (users.screen_name = 'millikan' AND users.id <> 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.000192)[0m   [0;1mSELECT * FROM users WHERE (users.email = 'foo.bar_1-9@baz-quux0.example.es' AND users.id <> 1) LIMIT 1[0m
+  [4;35;1mUser Load (0.000190)[0m   [0mSELECT * FROM users WHERE (users.screen_name = 'millikan' AND users.id <> 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.000186)[0m   [0;1mSELECT * FROM users WHERE (users.email = 'foo.bar_1-9@baz-quux0.example.jp' AND users.id <> 1) LIMIT 1[0m
+  [4;35;1mUser Load (0.000187)[0m   [0mSELECT * FROM users WHERE (users.screen_name = 'millikan' AND users.id <> 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.000186)[0m   [0;1mSELECT * FROM users WHERE (users.email = 'foo.bar_1-9@baz-quux0.example.info' AND users.id <> 1) LIMIT 1[0m
+  [4;35;1mSQL (0.000084)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000084)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.000169)[0m   [0mSELECT * FROM users WHERE (users.`id` = 1) [0m
+  [4;36;1mUser Load (0.000137)[0m   [0;1mSELECT * FROM users WHERE (users.`id` = 2) [0m
+  [4;35;1mUser Load (0.000235)[0m   [0mSELECT * FROM users WHERE (users.screen_name = 'millikan' AND users.id <> 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.000203)[0m   [0;1mSELECT * FROM users WHERE (users.email = 'ram@example.com' AND users.id <> 1) LIMIT 1[0m
+  [4;35;1mUser Load (0.000198)[0m   [0mSELECT * FROM users WHERE (users.screen_name = 'millikan' AND users.id <> 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.000245)[0m   [0;1mSELECT * FROM users WHERE (users.email = 'ram@example.com' AND users.id <> 1) LIMIT 1[0m
+  [4;35;1mSQL (0.000080)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000058)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.000179)[0m   [0mSELECT * FROM users WHERE (users.`id` = 1) [0m
+  [4;36;1mUser Load (0.000137)[0m   [0;1mSELECT * FROM users WHERE (users.`id` = 2) [0m
+  [4;35;1mUser Load (0.000210)[0m   [0mSELECT * FROM users WHERE (users.screen_name = 'millikan' AND users.id <> 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.000187)[0m   [0;1mSELECT * FROM users WHERE (users.email = 'ram@example.com' AND users.id <> 1) LIMIT 1[0m
+  [4;35;1mUser Load (0.000186)[0m   [0mSELECT * FROM users WHERE (users.screen_name = 'millikan' AND users.id <> 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.000176)[0m   [0;1mSELECT * FROM users WHERE (users.email = 'ram@example.com' AND users.id <> 1) LIMIT 1[0m
+  [4;35;1mSQL (0.000063)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000084)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.000170)[0m   [0mSELECT * FROM users WHERE (users.`id` = 1) [0m
+  [4;36;1mUser Load (0.000138)[0m   [0;1mSELECT * FROM users WHERE (users.`id` = 2) [0m
+  [4;35;1mUser Load (0.000215)[0m   [0mSELECT * FROM users WHERE (users.screen_name = 'aaaaaaaaaaaaaaaaaaaaa' AND users.id <> 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.000223)[0m   [0;1mSELECT * FROM users WHERE (users.email = 'ram@example.com' AND users.id <> 1) LIMIT 1[0m
+  [4;35;1mUser Load (0.000244)[0m   [0mSELECT * FROM users WHERE (users.screen_name = 'aaaaaaaaaaaaaaaaaaaa' AND users.id <> 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.000211)[0m   [0;1mSELECT * FROM users WHERE (users.email = 'ram@example.com' AND users.id <> 1) LIMIT 1[0m
+  [4;35;1mSQL (0.000084)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000084)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.000167)[0m   [0mSELECT * FROM users WHERE (users.`id` = 1) [0m
+  [4;36;1mUser Load (0.000136)[0m   [0;1mSELECT * FROM users WHERE (users.`id` = 2) [0m
+  [4;35;1mUser Load (0.000202)[0m   [0mSELECT * FROM users WHERE (users.screen_name = 'aaa' AND users.id <> 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.000190)[0m   [0;1mSELECT * FROM users WHERE (users.email = 'ram@example.com' AND users.id <> 1) LIMIT 1[0m
+  [4;35;1mUser Load (0.000195)[0m   [0mSELECT * FROM users WHERE (users.screen_name = 'aaaa' AND users.id <> 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.000194)[0m   [0;1mSELECT * FROM users WHERE (users.email = 'ram@example.com' AND users.id <> 1) LIMIT 1[0m
+  [4;35;1mSQL (0.000085)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000083)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.000172)[0m   [0mSELECT * FROM users WHERE (users.`id` = 1) [0m
+  [4;36;1mUser Load (0.000139)[0m   [0;1mSELECT * FROM users WHERE (users.`id` = 2) [0m
+  [4;35;1mUser Load (0.000217)[0m   [0mSELECT * FROM users WHERE (users.screen_name = 'rails/rocks' AND users.id <> 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.000190)[0m   [0;1mSELECT * FROM users WHERE (users.email = 'ram@example.com' AND users.id <> 1) LIMIT 1[0m
+  [4;35;1mUser Load (0.000274)[0m   [0mSELECT * FROM users WHERE (users.screen_name = 'web2.0' AND users.id <> 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.000221)[0m   [0;1mSELECT * FROM users WHERE (users.email = 'ram@example.com' AND users.id <> 1) LIMIT 1[0m
+  [4;35;1mUser Load (0.000247)[0m   [0mSELECT * FROM users WHERE (users.screen_name = 'javscript:something' AND users.id <> 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.000193)[0m   [0;1mSELECT * FROM users WHERE (users.email = 'ram@example.com' AND users.id <> 1) LIMIT 1[0m
+  [4;35;1mSQL (0.000086)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000057)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.000287)[0m   [0mSELECT * FROM users WHERE (users.`id` = 1) [0m
+  [4;36;1mUser Load (0.000127)[0m   [0;1mSELECT * FROM users WHERE (users.`id` = 2) [0m
+  [4;35;1mUser Load (0.000239)[0m   [0mSELECT * FROM users WHERE (users.screen_name = 'aure' AND users.id <> 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.000216)[0m   [0;1mSELECT * FROM users WHERE (users.email = 'ram@example.com' AND users.id <> 1) LIMIT 1[0m
+  [4;35;1mUser Load (0.000485)[0m   [0mSELECT * FROM users WHERE (users.screen_name = 'michael' AND users.id <> 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.000242)[0m   [0;1mSELECT * FROM users WHERE (users.email = 'ram@example.com' AND users.id <> 1) LIMIT 1[0m
+  [4;35;1mUser Load (0.000198)[0m   [0mSELECT * FROM users WHERE (users.screen_name = 'web_20' AND users.id <> 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.000188)[0m   [0;1mSELECT * FROM users WHERE (users.email = 'ram@example.com' AND users.id <> 1) LIMIT 1[0m
+  [4;35;1mSQL (0.000086)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000084)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.000168)[0m   [0mSELECT * FROM users WHERE (users.`id` = 1) [0m
+  [4;36;1mUser Load (0.000142)[0m   [0;1mSELECT * FROM users WHERE (users.`id` = 2) [0m
+  [4;35;1mUser Load (0.000150)[0m   [0mSELECT * FROM users WHERE (users.screen_name = 'millikan') LIMIT 1[0m
+  [4;36;1mUser Load (0.000145)[0m   [0;1mSELECT * FROM users WHERE (users.email = 'ram@example.com') LIMIT 1[0m
+  [4;35;1mSQL (0.000083)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000055)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.000157)[0m   [0mSELECT * FROM users WHERE (users.`id` = 1) [0m
+  [4;36;1mUser Load (0.000136)[0m   [0;1mSELECT * FROM users WHERE (users.`id` = 2) [0m
+  [4;35;1mUser Load (0.000295)[0m   [0mSELECT * FROM users WHERE (users.screen_name = 'aa/noyes' AND users.id <> 2) LIMIT 1[0m
+  [4;36;1mUser Load (0.000199)[0m   [0;1mSELECT * FROM users WHERE (users.email = 'anoyes@example,com' AND users.id <> 2) LIMIT 1[0m
+  [4;35;1mSQL (0.000083)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000055)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.000165)[0m   [0mSELECT * FROM users WHERE (users.`id` = 1) [0m
+  [4;36;1mUser Load (0.000149)[0m   [0;1mSELECT * FROM users WHERE (users.`id` = 2) [0m
+  [4;35;1mUser Load (0.000534)[0m   [0mSELECT * FROM users WHERE (users.screen_name = 'millikan' AND users.id <> 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.000259)[0m   [0;1mSELECT * FROM users WHERE (users.email = 'ram@example.com' AND users.id <> 1) LIMIT 1[0m
+  [4;35;1mSQL (0.000093)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000151)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000056)[0m   [0mBEGIN[0m
+
+
+Processing SiteController#about (for 0.0.0.0 at 2009-09-15 13:23:46) [GET]
+  Session ID: 
+  Parameters: {"action"=>"about", "controller"=>"site"}
+Rendering  within layouts/application
+Rendering site/about
+Completed in 0.04425 (22 reqs/sec) | Rendering: 0.04358 (98%) | DB: 0.00021 (0%) | 200 OK [http://test.host/site/about]
+  [4;36;1mSQL (0.000131)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000061)[0m   [0mBEGIN[0m
+
+
+Processing SiteController#help (for 0.0.0.0 at 2009-09-15 13:23:46) [GET]
+  Session ID: 
+  Parameters: {"action"=>"help", "controller"=>"site"}
+Rendering  within layouts/application
+Rendering site/help
+Completed in 0.02105 (47 reqs/sec) | Rendering: 0.02094 (99%) | DB: 0.00019 (0%) | 200 OK [http://test.host/site/help]
+  [4;36;1mSQL (0.000133)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000131)[0m   [0mBEGIN[0m
+
+
+Processing SiteController#index (for 0.0.0.0 at 2009-09-15 13:23:46) [GET]
+  Session ID: 
+  Parameters: {"action"=>"index", "controller"=>"site"}
+Rendering  within layouts/application
+Rendering site/index
+Completed in 0.01646 (60 reqs/sec) | Rendering: 0.01634 (99%) | DB: 0.00026 (1%) | 200 OK [http://test.host/]
+  [4;36;1mSQL (0.000135)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000066)[0m   [0mBEGIN[0m
+
+
+Processing SiteController#index (for 0.0.0.0 at 2009-09-15 13:23:46) [GET]
+  Session ID: 
+  Parameters: {"action"=>"index", "controller"=>"site"}
+Rendering  within layouts/application
+Rendering site/index
+Completed in 0.00194 (514 reqs/sec) | Rendering: 0.00183 (94%) | DB: 0.00020 (10%) | 200 OK [http://test.host/]
+  [4;36;1mSQL (0.000130)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000076)[0m   [0mBEGIN[0m
+  [4;36;1mUser Columns (0.001443)[0m   [0;1mSHOW FIELDS FROM users[0m
+  [4;35;1mUser Load (0.000424)[0m   [0mSELECT * FROM users WHERE (users.`id` = 1) [0m
+
+
+Processing UserController#index (for 0.0.0.0 at 2009-09-15 13:23:47) [GET]
+  Session ID: 
+  Parameters: {"action"=>"index", "controller"=>"user"}
+Rendering  within layouts/application
+Rendering user/index
+Completed in 0.02656 (37 reqs/sec) | Rendering: 0.02581 (97%) | DB: 0.00207 (7%) | 200 OK [http://test.host/user]
+  [4;36;1mSQL (0.000161)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000232)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.000275)[0m   [0;1mSELECT * FROM users WHERE (users.`id` = 1) [0m
+
+
+Processing UserController#index (for 0.0.0.0 at 2009-09-15 13:23:47) [GET]
+  Session ID: 
+  Parameters: {"action"=>"index", "controller"=>"user"}
+Redirected to http://test.host/user/login
+Filter chain halted as [#<ActionController::Filters::ClassMethods::SymbolFilter:0x235d28c @filter=:protect>] returned false.
+Completed in 0.00029 (3472 reqs/sec) | DB: 0.00067 (231%) | 302 Found [http://test.host/user]
+  [4;35;1mSQL (0.000103)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000093)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.000207)[0m   [0mSELECT * FROM users WHERE (users.`id` = 1) [0m
+
+
+Processing UserController#login (for 0.0.0.0 at 2009-09-15 13:23:47) [POST]
+  Session ID: 
+  Parameters: {"user"=>{"screen_name"=>"no such user", "password"=>"electron"}, "action"=>"login", "controller"=>"user"}
+  [4;36;1mUser Load (0.000235)[0m   [0;1mSELECT * FROM users WHERE (users.`screen_name` = 'no such user' AND users.`password` = 'electron') LIMIT 1[0m
+Rendering  within layouts/application
+Rendering user/login
+Completed in 0.01600 (62 reqs/sec) | Rendering: 0.01514 (94%) | DB: 0.00064 (3%) | 200 OK [http://test.host/user/login?user=passwordelectronscreen_nameno+such+user]
+  [4;35;1mSQL (0.000159)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000095)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.000277)[0m   [0mSELECT * FROM users WHERE (users.`id` = 1) [0m
+
+
+Processing UserController#login (for 0.0.0.0 at 2009-09-15 13:23:47) [POST]
+  Session ID: 
+  Parameters: {"user"=>{"screen_name"=>"millikan", "password"=>"electronbaz"}, "action"=>"login", "controller"=>"user"}
+  [4;36;1mUser Load (0.000214)[0m   [0;1mSELECT * FROM users WHERE (users.`screen_name` = 'millikan' AND users.`password` = 'electronbaz') LIMIT 1[0m
+Rendering  within layouts/application
+Rendering user/login
+Completed in 0.00371 (269 reqs/sec) | Rendering: 0.00295 (79%) | DB: 0.00074 (20%) | 200 OK [http://test.host/user/login?user=passwordelectronbazscreen_namemillikan]
+  [4;35;1mSQL (0.000122)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000098)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.000248)[0m   [0mSELECT * FROM users WHERE (users.`id` = 1) [0m
+
+
+Processing UserController#index (for 0.0.0.0 at 2009-09-15 13:23:47) [GET]
+  Session ID: 
+  Parameters: {"action"=>"index", "controller"=>"user"}
+Redirected to http://test.host/user/login
+Filter chain halted as [#<ActionController::Filters::ClassMethods::SymbolFilter:0x235d28c @filter=:protect>] returned false.
+Completed in 0.00027 (3758 reqs/sec) | DB: 0.00047 (175%) | 302 Found [http://test.host/user]
+
+
+Processing UserController#login (for 0.0.0.0 at 2009-09-15 13:23:47) [POST]
+  Session ID: 
+  Parameters: {"user"=>{"screen_name"=>"millikan", "password"=>"electron"}, "action"=>"login", "controller"=>"user"}
+  [4;36;1mUser Load (0.000213)[0m   [0;1mSELECT * FROM users WHERE (users.`screen_name` = 'millikan' AND users.`password` = 'electron') LIMIT 1[0m
+Cookie set: remember_me=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT
+Cookie set: authorization_token=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT
+Redirected to http://test.host/user
+Completed in 0.00089 (1119 reqs/sec) | DB: 0.00021 (23%) | 302 Found [http://test.host/user]
+  [4;35;1mSQL (0.000139)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000097)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.000257)[0m   [0mSELECT * FROM users WHERE (users.`id` = 1) [0m
+
+
+Processing UserController#login (for 0.0.0.0 at 2009-09-15 13:23:47) [GET]
+  Session ID: 
+  Parameters: {"action"=>"login", "controller"=>"user"}
+Rendering  within layouts/application
+Rendering user/login
+Completed in 0.00325 (307 reqs/sec) | Rendering: 0.00304 (93%) | DB: 0.00049 (15%) | 200 OK [http://test.host/user/login]
+  [4;36;1mSQL (0.000137)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000067)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.000239)[0m   [0;1mSELECT * FROM users WHERE (users.`id` = 1) [0m
+
+
+Processing UserController#login (for 0.0.0.0 at 2009-09-15 13:23:47) [POST]
+  Session ID: 
+  Parameters: {"user"=>{"screen_name"=>"millikan", "password"=>"electron"}, "action"=>"login", "controller"=>"user"}
+  [4;35;1mUser Load (0.000236)[0m   [0mSELECT * FROM users WHERE (users.`screen_name` = 'millikan' AND users.`password` = 'electron') LIMIT 1[0m
+Cookie set: remember_me=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT
+Cookie set: authorization_token=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT
+Redirected to http://test.host/user
+Completed in 0.00112 (896 reqs/sec) | DB: 0.00068 (60%) | 302 Found [http://test.host/user/login?user=passwordelectronscreen_namemillikan]
+  [4;36;1mSQL (0.000094)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000061)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.000201)[0m   [0;1mSELECT * FROM users WHERE (users.`id` = 1) [0m
+
+
+Processing UserController#login (for 0.0.0.0 at 2009-09-15 13:23:47) [POST]
+  Session ID: 
+  Parameters: {"user"=>{"screen_name"=>"millikan", "password"=>"electron"}, "action"=>"login", "controller"=>"user"}
+  [4;35;1mUser Load (0.000236)[0m   [0mSELECT * FROM users WHERE (users.`screen_name` = 'millikan' AND users.`password` = 'electron') LIMIT 1[0m
+Cookie set: remember_me=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT
+Cookie set: authorization_token=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT
+Redirected to http://test.host/user
+Completed in 0.00102 (980 reqs/sec) | DB: 0.00059 (58%) | 302 Found [http://test.host/user/login?user=passwordelectronscreen_namemillikan]
+
+
+Processing UserController#logout (for 0.0.0.0 at 2009-09-15 13:23:47) [GET]
+  Session ID: 
+  Parameters: {"action"=>"logout", "controller"=>"user"}
+  [4;36;1mSQL (0.000088)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000076)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.000195)[0m   [0;1mSELECT * FROM users WHERE (users.`id` = 1) [0m
+
+
+Processing UserController#index (for 0.0.0.0 at 2009-09-15 13:23:47) [GET]
+  Session ID: 
+  Parameters: {"action"=>"index", "controller"=>"user"}
+Rendering  within layouts/application
+Rendering user/index
+Completed in 0.00184 (542 reqs/sec) | Rendering: 0.00174 (94%) | DB: 0.00036 (19%) | 200 OK [http://test.host/user]
+  [4;35;1mSQL (0.000117)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000089)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.000250)[0m   [0mSELECT * FROM users WHERE (users.`id` = 1) [0m
+
+
+Processing UserController#index (for 0.0.0.0 at 2009-09-15 13:23:47) [GET]
+  Session ID: 
+  Parameters: {"action"=>"index", "controller"=>"user"}
+Redirected to http://test.host/user/login
+Filter chain halted as [#<ActionController::Filters::ClassMethods::SymbolFilter:0x235d28c @filter=:protect>] returned false.
+Completed in 0.00025 (4013 reqs/sec) | DB: 0.00046 (183%) | 302 Found [http://test.host/user]
+
+
+Processing UserController#register (for 0.0.0.0 at 2009-09-15 13:23:47) [POST]
+  Session ID: 
+  Parameters: {"user"=>{"screen_name"=>"new_screen_name", "password"=>"long_enough_password", "email"=>"valid@example.com"}, "action"=>"register", "controller"=>"user"}
+  [4;36;1mUser Load (0.000208)[0m   [0;1mSELECT * FROM users WHERE (users.screen_name = 'new_screen_name') LIMIT 1[0m
+  [4;35;1mUser Load (0.000141)[0m   [0mSELECT * FROM users WHERE (users.email = 'valid@example.com') LIMIT 1[0m
+  [4;36;1mSQL (0.000160)[0m   [0;1mINSERT INTO users (`authorization_token`, `updated_at`, `screen_name`, `password`, `created_at`, `email`) VALUES(NULL, '2009-09-15 13:23:47', 'new_screen_name', 'long_enough_password', '2009-09-15 13:23:47', 'valid@example.com')[0m
+Redirected to http://test.host/user
+Completed in 0.00220 (455 reqs/sec) | DB: 0.00051 (23%) | 302 Found [http://test.host/user]
+  [4;35;1mSQL (0.000653)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000123)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.000216)[0m   [0mSELECT * FROM users WHERE (users.`id` = 1) [0m
+
+
+Processing UserController#register (for 0.0.0.0 at 2009-09-15 13:23:47) [POST]
+  Session ID: 
+  Parameters: {"user"=>{"screen_name"=>"aa/noyes", "password"=>"sun", "email"=>"anoyes@example,com"}, "action"=>"register", "controller"=>"user"}
+  [4;36;1mUser Load (0.000205)[0m   [0;1mSELECT * FROM users WHERE (users.screen_name = 'aa/noyes') LIMIT 1[0m
+  [4;35;1mUser Load (0.000133)[0m   [0mSELECT * FROM users WHERE (users.email = 'anoyes@example,com') LIMIT 1[0m
+Rendering  within layouts/application
+Rendering user/register
+Completed in 0.02533 (39 reqs/sec) | Rendering: 0.02404 (94%) | DB: 0.00133 (5%) | 200 OK [http://test.host/user/register?user=passwordsunemailanoyes%40example%2Ccomscreen_nameaa%2Fnoyes]
+  [4;36;1mSQL (0.000156)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000058)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.000262)[0m   [0;1mSELECT * FROM users WHERE (users.`id` = 1) [0m
+
+
+Processing UserController#register (for 0.0.0.0 at 2009-09-15 13:23:47) [GET]
+  Session ID: 
+  Parameters: {"action"=>"register", "controller"=>"user"}
+Rendering  within layouts/application
+Rendering user/register
+Completed in 0.00241 (415 reqs/sec) | Rendering: 0.00230 (95%) | DB: 0.00048 (19%) | 200 OK [http://test.host/user/register]
+  [4;35;1mSQL (0.000139)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000057)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.000254)[0m   [0mSELECT * FROM users WHERE (users.`id` = 1) [0m
+
+
+Processing UserController#register (for 0.0.0.0 at 2009-09-15 13:23:47) [POST]
+  Session ID: 
+  Parameters: {"user"=>{"screen_name"=>"new_screen_name", "password"=>"long_enough_password", "email"=>"valid@example.com"}, "action"=>"register", "controller"=>"user"}
+  [4;36;1mUser Load (0.000189)[0m   [0;1mSELECT * FROM users WHERE (users.screen_name = 'new_screen_name') LIMIT 1[0m
+  [4;35;1mUser Load (0.000148)[0m   [0mSELECT * FROM users WHERE (users.email = 'valid@example.com') LIMIT 1[0m
+  [4;36;1mSQL (0.000160)[0m   [0;1mINSERT INTO users (`authorization_token`, `updated_at`, `screen_name`, `password`, `created_at`, `email`) VALUES(NULL, '2009-09-15 13:23:47', 'new_screen_name', 'long_enough_password', '2009-09-15 13:23:47', 'valid@example.com')[0m
+Redirected to http://test.host/user
+Completed in 0.00221 (451 reqs/sec) | DB: 0.00095 (42%) | 302 Found [http://test.host/user/register?user=passwordlong_enough_passwordemailvalid%40example.comscreen_namenew_screen_name]
+  [4;35;1mUser Load (0.000197)[0m   [0mSELECT * FROM users WHERE (users.`screen_name` = 'new_screen_name' AND users.`password` = 'long_enough_password') LIMIT 1[0m
+  [4;36;1mSQL (0.000595)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.000152)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000090)[0m   [0mBEGIN[0m
+  [4;36;1mUser Columns (0.001306)[0m   [0;1mSHOW FIELDS FROM users[0m
+  [4;35;1mUser Load (0.000549)[0m   [0mSELECT * FROM users WHERE (users.`id` = 1) [0m
+  [4;36;1mUser Load (0.000144)[0m   [0;1mSELECT * FROM users WHERE (users.`id` = 2) [0m
+  [4;35;1mUser Load (0.000245)[0m   [0mSELECT * FROM users WHERE (users.screen_name = 'millikan' AND users.id <> 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.000179)[0m   [0;1mSELECT * FROM users WHERE (users.email = 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaram@example.com' AND users.id <> 1) LIMIT 1[0m
+  [4;35;1mSQL (0.000095)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000127)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.000156)[0m   [0mSELECT * FROM users WHERE (users.`id` = 1) [0m
+  [4;36;1mUser Load (0.000126)[0m   [0;1mSELECT * FROM users WHERE (users.`id` = 2) [0m
+  [4;35;1mUser Load (0.000236)[0m   [0mSELECT * FROM users WHERE (users.screen_name = 'millikan' AND users.id <> 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.000186)[0m   [0;1mSELECT * FROM users WHERE (users.email = 'foobar@example.c' AND users.id <> 1) LIMIT 1[0m
+  [4;35;1mUser Load (0.000203)[0m   [0mSELECT * FROM users WHERE (users.screen_name = 'millikan' AND users.id <> 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.000191)[0m   [0;1mSELECT * FROM users WHERE (users.email = '@example.com' AND users.id <> 1) LIMIT 1[0m
+  [4;35;1mUser Load (0.000194)[0m   [0mSELECT * FROM users WHERE (users.screen_name = 'millikan' AND users.id <> 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.000181)[0m   [0;1mSELECT * FROM users WHERE (users.email = 'f@com' AND users.id <> 1) LIMIT 1[0m
+  [4;35;1mUser Load (0.000180)[0m   [0mSELECT * FROM users WHERE (users.screen_name = 'millikan' AND users.id <> 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.000190)[0m   [0;1mSELECT * FROM users WHERE (users.email = 'foo@bar..com' AND users.id <> 1) LIMIT 1[0m
+  [4;35;1mUser Load (0.000185)[0m   [0mSELECT * FROM users WHERE (users.screen_name = 'millikan' AND users.id <> 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.000186)[0m   [0;1mSELECT * FROM users WHERE (users.email = 'foobar@example.infod' AND users.id <> 1) LIMIT 1[0m
+  [4;35;1mUser Load (0.000445)[0m   [0mSELECT * FROM users WHERE (users.screen_name = 'millikan' AND users.id <> 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.000367)[0m   [0;1mSELECT * FROM users WHERE (users.email = 'foobar.example.com' AND users.id <> 1) LIMIT 1[0m
+  [4;35;1mUser Load (0.001176)[0m   [0mSELECT * FROM users WHERE (users.screen_name = 'millikan' AND users.id <> 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.000499)[0m   [0;1mSELECT * FROM users WHERE (users.email = 'foo,@example.com' AND users.id <> 1) LIMIT 1[0m
+  [4;35;1mUser Load (0.001335)[0m   [0mSELECT * FROM users WHERE (users.screen_name = 'millikan' AND users.id <> 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.000270)[0m   [0;1mSELECT * FROM users WHERE (users.email = 'foo@ex(ample.com' AND users.id <> 1) LIMIT 1[0m
+  [4;35;1mUser Load (0.000362)[0m   [0mSELECT * FROM users WHERE (users.screen_name = 'millikan' AND users.id <> 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.000225)[0m   [0;1mSELECT * FROM users WHERE (users.email = 'foo@example,com' AND users.id <> 1) LIMIT 1[0m
+  [4;35;1mSQL (0.000090)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000082)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.000177)[0m   [0mSELECT * FROM users WHERE (users.`id` = 1) [0m
+  [4;36;1mUser Load (0.000139)[0m   [0;1mSELECT * FROM users WHERE (users.`id` = 2) [0m
+  [4;35;1mUser Load (0.000200)[0m   [0mSELECT * FROM users WHERE (users.screen_name = 'millikan' AND users.id <> 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.000183)[0m   [0;1mSELECT * FROM users WHERE (users.email = 'foo.bar_1-9@baz-quux0.example.com' AND users.id <> 1) LIMIT 1[0m
+  [4;35;1mUser Load (0.000183)[0m   [0mSELECT * FROM users WHERE (users.screen_name = 'millikan' AND users.id <> 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.000180)[0m   [0;1mSELECT * FROM users WHERE (users.email = 'foo.bar_1-9@baz-quux0.example.org' AND users.id <> 1) LIMIT 1[0m
+  [4;35;1mUser Load (0.000194)[0m   [0mSELECT * FROM users WHERE (users.screen_name = 'millikan' AND users.id <> 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.000182)[0m   [0;1mSELECT * FROM users WHERE (users.email = 'foo.bar_1-9@baz-quux0.example.net' AND users.id <> 1) LIMIT 1[0m
+  [4;35;1mUser Load (0.000181)[0m   [0mSELECT * FROM users WHERE (users.screen_name = 'millikan' AND users.id <> 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.000179)[0m   [0;1mSELECT * FROM users WHERE (users.email = 'foo.bar_1-9@baz-quux0.example.edu' AND users.id <> 1) LIMIT 1[0m
+  [4;35;1mUser Load (0.000201)[0m   [0mSELECT * FROM users WHERE (users.screen_name = 'millikan' AND users.id <> 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.000189)[0m   [0;1mSELECT * FROM users WHERE (users.email = 'foo.bar_1-9@baz-quux0.example.es' AND users.id <> 1) LIMIT 1[0m
+  [4;35;1mUser Load (0.000200)[0m   [0mSELECT * FROM users WHERE (users.screen_name = 'millikan' AND users.id <> 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.000191)[0m   [0;1mSELECT * FROM users WHERE (users.email = 'foo.bar_1-9@baz-quux0.example.jp' AND users.id <> 1) LIMIT 1[0m
+  [4;35;1mUser Load (0.000189)[0m   [0mSELECT * FROM users WHERE (users.screen_name = 'millikan' AND users.id <> 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.000190)[0m   [0;1mSELECT * FROM users WHERE (users.email = 'foo.bar_1-9@baz-quux0.example.info' AND users.id <> 1) LIMIT 1[0m
+  [4;35;1mSQL (0.000088)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000083)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.000166)[0m   [0mSELECT * FROM users WHERE (users.`id` = 1) [0m
+  [4;36;1mUser Load (0.000159)[0m   [0;1mSELECT * FROM users WHERE (users.`id` = 2) [0m
+  [4;35;1mUser Load (0.000205)[0m   [0mSELECT * FROM users WHERE (users.screen_name = 'millikan' AND users.id <> 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.000201)[0m   [0;1mSELECT * FROM users WHERE (users.email = 'ram@example.com' AND users.id <> 1) LIMIT 1[0m
+  [4;35;1mUser Load (0.000191)[0m   [0mSELECT * FROM users WHERE (users.screen_name = 'millikan' AND users.id <> 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.000187)[0m   [0;1mSELECT * FROM users WHERE (users.email = 'ram@example.com' AND users.id <> 1) LIMIT 1[0m
+  [4;35;1mSQL (0.000083)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000064)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.000162)[0m   [0mSELECT * FROM users WHERE (users.`id` = 1) [0m
+  [4;36;1mUser Load (0.000141)[0m   [0;1mSELECT * FROM users WHERE (users.`id` = 2) [0m
+  [4;35;1mUser Load (0.000204)[0m   [0mSELECT * FROM users WHERE (users.screen_name = 'millikan' AND users.id <> 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.000202)[0m   [0;1mSELECT * FROM users WHERE (users.email = 'ram@example.com' AND users.id <> 1) LIMIT 1[0m
+  [4;35;1mUser Load (0.000193)[0m   [0mSELECT * FROM users WHERE (users.screen_name = 'millikan' AND users.id <> 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.000209)[0m   [0;1mSELECT * FROM users WHERE (users.email = 'ram@example.com' AND users.id <> 1) LIMIT 1[0m
+  [4;35;1mSQL (0.000077)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000080)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.000198)[0m   [0mSELECT * FROM users WHERE (users.`id` = 1) [0m
+  [4;36;1mUser Load (0.000149)[0m   [0;1mSELECT * FROM users WHERE (users.`id` = 2) [0m
+  [4;35;1mUser Load (0.000235)[0m   [0mSELECT * FROM users WHERE (users.screen_name = 'aaaaaaaaaaaaaaaaaaaaa' AND users.id <> 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.000192)[0m   [0;1mSELECT * FROM users WHERE (users.email = 'ram@example.com' AND users.id <> 1) LIMIT 1[0m
+  [4;35;1mUser Load (0.000191)[0m   [0mSELECT * FROM users WHERE (users.screen_name = 'aaaaaaaaaaaaaaaaaaaa' AND users.id <> 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.000186)[0m   [0;1mSELECT * FROM users WHERE (users.email = 'ram@example.com' AND users.id <> 1) LIMIT 1[0m
+  [4;35;1mSQL (0.000083)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000063)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.000186)[0m   [0mSELECT * FROM users WHERE (users.`id` = 1) [0m
+  [4;36;1mUser Load (0.000141)[0m   [0;1mSELECT * FROM users WHERE (users.`id` = 2) [0m
+  [4;35;1mUser Load (0.000203)[0m   [0mSELECT * FROM users WHERE (users.screen_name = 'aaa' AND users.id <> 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.000191)[0m   [0;1mSELECT * FROM users WHERE (users.email = 'ram@example.com' AND users.id <> 1) LIMIT 1[0m
+  [4;35;1mUser Load (0.000225)[0m   [0mSELECT * FROM users WHERE (users.screen_name = 'aaaa' AND users.id <> 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.000223)[0m   [0;1mSELECT * FROM users WHERE (users.email = 'ram@example.com' AND users.id <> 1) LIMIT 1[0m
+  [4;35;1mSQL (0.000087)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000066)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.000164)[0m   [0mSELECT * FROM users WHERE (users.`id` = 1) [0m
+  [4;36;1mUser Load (0.000148)[0m   [0;1mSELECT * FROM users WHERE (users.`id` = 2) [0m
+  [4;35;1mUser Load (0.000214)[0m   [0mSELECT * FROM users WHERE (users.screen_name = 'rails/rocks' AND users.id <> 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.000185)[0m   [0;1mSELECT * FROM users WHERE (users.email = 'ram@example.com' AND users.id <> 1) LIMIT 1[0m
+  [4;35;1mUser Load (0.000224)[0m   [0mSELECT * FROM users WHERE (users.screen_name = 'web2.0' AND users.id <> 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.000234)[0m   [0;1mSELECT * FROM users WHERE (users.email = 'ram@example.com' AND users.id <> 1) LIMIT 1[0m
+  [4;35;1mUser Load (0.000195)[0m   [0mSELECT * FROM users WHERE (users.screen_name = 'javscript:something' AND users.id <> 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.000187)[0m   [0;1mSELECT * FROM users WHERE (users.email = 'ram@example.com' AND users.id <> 1) LIMIT 1[0m
+  [4;35;1mSQL (0.000082)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000065)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.000197)[0m   [0mSELECT * FROM users WHERE (users.`id` = 1) [0m
+  [4;36;1mUser Load (0.000143)[0m   [0;1mSELECT * FROM users WHERE (users.`id` = 2) [0m
+  [4;35;1mUser Load (0.000205)[0m   [0mSELECT * FROM users WHERE (users.screen_name = 'aure' AND users.id <> 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.000201)[0m   [0;1mSELECT * FROM users WHERE (users.email = 'ram@example.com' AND users.id <> 1) LIMIT 1[0m
+  [4;35;1mUser Load (0.000192)[0m   [0mSELECT * FROM users WHERE (users.screen_name = 'michael' AND users.id <> 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.000186)[0m   [0;1mSELECT * FROM users WHERE (users.email = 'ram@example.com' AND users.id <> 1) LIMIT 1[0m
+  [4;35;1mUser Load (0.000214)[0m   [0mSELECT * FROM users WHERE (users.screen_name = 'web_20' AND users.id <> 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.000192)[0m   [0;1mSELECT * FROM users WHERE (users.email = 'ram@example.com' AND users.id <> 1) LIMIT 1[0m
+  [4;35;1mSQL (0.000110)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000065)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.000156)[0m   [0mSELECT * FROM users WHERE (users.`id` = 1) [0m
+  [4;36;1mUser Load (0.000135)[0m   [0;1mSELECT * FROM users WHERE (users.`id` = 2) [0m
+  [4;35;1mUser Load (0.000146)[0m   [0mSELECT * FROM users WHERE (users.screen_name = 'millikan') LIMIT 1[0m
+  [4;36;1mUser Load (0.000135)[0m   [0;1mSELECT * FROM users WHERE (users.email = 'ram@example.com') LIMIT 1[0m
+  [4;35;1mSQL (0.000080)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000079)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.000161)[0m   [0mSELECT * FROM users WHERE (users.`id` = 1) [0m
+  [4;36;1mUser Load (0.000137)[0m   [0;1mSELECT * FROM users WHERE (users.`id` = 2) [0m
+  [4;35;1mUser Load (0.000202)[0m   [0mSELECT * FROM users WHERE (users.screen_name = 'aa/noyes' AND users.id <> 2) LIMIT 1[0m
+  [4;36;1mUser Load (0.000203)[0m   [0;1mSELECT * FROM users WHERE (users.email = 'anoyes@example,com' AND users.id <> 2) LIMIT 1[0m
+  [4;35;1mSQL (0.000072)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000062)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.000150)[0m   [0mSELECT * FROM users WHERE (users.`id` = 1) [0m
+  [4;36;1mUser Load (0.000139)[0m   [0;1mSELECT * FROM users WHERE (users.`id` = 2) [0m
+  [4;35;1mUser Load (0.000247)[0m   [0mSELECT * FROM users WHERE (users.screen_name = 'millikan' AND users.id <> 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.000202)[0m   [0;1mSELECT * FROM users WHERE (users.email = 'ram@example.com' AND users.id <> 1) LIMIT 1[0m
+  [4;35;1mSQL (0.000077)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000176)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000058)[0m   [0mBEGIN[0m
+
+
+Processing SiteController#about (for 0.0.0.0 at 2009-09-15 13:25:34) [GET]
+  Session ID: 
+  Parameters: {"action"=>"about", "controller"=>"site"}
+Rendering  within layouts/application
+Rendering site/about
+Completed in 0.00525 (190 reqs/sec) | Rendering: 0.00459 (87%) | DB: 0.00023 (4%) | 200 OK [http://test.host/site/about]
+  [4;36;1mSQL (0.000113)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000069)[0m   [0mBEGIN[0m
+
+
+Processing SiteController#help (for 0.0.0.0 at 2009-09-15 13:25:34) [GET]
+  Session ID: 
+  Parameters: {"action"=>"help", "controller"=>"site"}
+Rendering  within layouts/application
+Rendering site/help
+Completed in 0.00195 (513 reqs/sec) | Rendering: 0.00185 (95%) | DB: 0.00018 (9%) | 200 OK [http://test.host/site/help]
+  [4;36;1mSQL (0.000101)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000085)[0m   [0mBEGIN[0m
+
+
+Processing SiteController#index (for 0.0.0.0 at 2009-09-15 13:25:34) [GET]
+  Session ID: 
+  Parameters: {"action"=>"index", "controller"=>"site"}
+Rendering  within layouts/application
+Rendering site/index
+Completed in 0.00189 (529 reqs/sec) | Rendering: 0.00181 (95%) | DB: 0.00019 (9%) | 200 OK [http://test.host/]
+  [4;36;1mSQL (0.000099)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000056)[0m   [0mBEGIN[0m
+
+
+Processing SiteController#index (for 0.0.0.0 at 2009-09-15 13:25:34) [GET]
+  Session ID: 
+  Parameters: {"action"=>"index", "controller"=>"site"}
+Rendering  within layouts/application
+Rendering site/index
+Completed in 0.00232 (430 reqs/sec) | Rendering: 0.00217 (93%) | DB: 0.00015 (6%) | 200 OK [http://test.host/]
+  [4;36;1mSQL (0.000160)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000094)[0m   [0mBEGIN[0m
+  [4;36;1mUser Columns (0.001707)[0m   [0;1mSHOW FIELDS FROM users[0m
+  [4;35;1mUser Load (0.000425)[0m   [0mSELECT * FROM users WHERE (users.`id` = 1) [0m
+
+
+Processing UserController#index (for 0.0.0.0 at 2009-09-15 13:25:34) [GET]
+  Session ID: 
+  Parameters: {"action"=>"index", "controller"=>"user"}
+Rendering  within layouts/application
+Rendering user/index
+Completed in 0.00277 (360 reqs/sec) | Rendering: 0.00209 (75%) | DB: 0.00239 (86%) | 200 OK [http://test.host/user]
+  [4;36;1mSQL (0.000138)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000094)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.000272)[0m   [0;1mSELECT * FROM users WHERE (users.`id` = 1) [0m
+
+
+Processing UserController#index (for 0.0.0.0 at 2009-09-15 13:25:34) [GET]
+  Session ID: 
+  Parameters: {"action"=>"index", "controller"=>"user"}
+Redirected to http://test.host/user/login
+Filter chain halted as [#<ActionController::Filters::ClassMethods::SymbolFilter:0x235d264 @filter=:protect>] returned false.
+Completed in 0.00027 (3761 reqs/sec) | DB: 0.00050 (189%) | 302 Found [http://test.host/user]
+  [4;35;1mSQL (0.000099)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000057)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.000180)[0m   [0mSELECT * FROM users WHERE (users.`id` = 1) [0m
+
+
+Processing UserController#login (for 0.0.0.0 at 2009-09-15 13:25:34) [POST]
+  Session ID: 
+  Parameters: {"user"=>{"screen_name"=>"no such user", "password"=>"electron"}, "action"=>"login", "controller"=>"user"}
+  [4;36;1mUser Load (0.000269)[0m   [0;1mSELECT * FROM users WHERE (users.`screen_name` = 'no such user' AND users.`password` = 'electron') LIMIT 1[0m
+Rendering  within layouts/application
+Rendering user/login
+Completed in 0.00453 (220 reqs/sec) | Rendering: 0.00362 (79%) | DB: 0.00061 (13%) | 200 OK [http://test.host/user/login?user=passwordelectronscreen_nameno+such+user]
+  [4;35;1mSQL (0.000127)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000065)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.000240)[0m   [0mSELECT * FROM users WHERE (users.`id` = 1) [0m
+
+
+Processing UserController#login (for 0.0.0.0 at 2009-09-15 13:25:34) [POST]
+  Session ID: 
+  Parameters: {"user"=>{"screen_name"=>"millikan", "password"=>"electronbaz"}, "action"=>"login", "controller"=>"user"}
+  [4;36;1mUser Load (0.000205)[0m   [0;1mSELECT * FROM users WHERE (users.`screen_name` = 'millikan' AND users.`password` = 'electronbaz') LIMIT 1[0m
+Rendering  within layouts/application
+Rendering user/login
+Completed in 0.00321 (311 reqs/sec) | Rendering: 0.00252 (78%) | DB: 0.00064 (19%) | 200 OK [http://test.host/user/login?user=passwordelectronbazscreen_namemillikan]
+  [4;35;1mSQL (0.000133)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000117)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.000233)[0m   [0mSELECT * FROM users WHERE (users.`id` = 1) [0m
+
+
+Processing UserController#index (for 0.0.0.0 at 2009-09-15 13:25:35) [GET]
+  Session ID: 
+  Parameters: {"action"=>"index", "controller"=>"user"}
+Redirected to http://test.host/user/login
+Filter chain halted as [#<ActionController::Filters::ClassMethods::SymbolFilter:0x235d264 @filter=:protect>] returned false.
+Completed in 0.00024 (4084 reqs/sec) | DB: 0.00048 (197%) | 302 Found [http://test.host/user]
+
+
+Processing UserController#login (for 0.0.0.0 at 2009-09-15 13:25:35) [POST]
+  Session ID: 
+  Parameters: {"user"=>{"screen_name"=>"millikan", "password"=>"electron"}, "action"=>"login", "controller"=>"user"}
+  [4;36;1mUser Load (0.000215)[0m   [0;1mSELECT * FROM users WHERE (users.`screen_name` = 'millikan' AND users.`password` = 'electron') LIMIT 1[0m
+Cookie set: remember_me=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT
+Cookie set: authorization_token=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT
+Redirected to http://test.host/user
+Completed in 0.00083 (1197 reqs/sec) | DB: 0.00022 (25%) | 302 Found [http://test.host/user]
+  [4;35;1mSQL (0.000117)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000088)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.000226)[0m   [0mSELECT * FROM users WHERE (users.`id` = 1) [0m
+
+
+Processing UserController#login (for 0.0.0.0 at 2009-09-15 13:25:35) [GET]
+  Session ID: 
+  Parameters: {"action"=>"login", "controller"=>"user"}
+Rendering  within layouts/application
+Rendering user/login
+Completed in 0.00266 (375 reqs/sec) | Rendering: 0.00248 (93%) | DB: 0.00043 (16%) | 200 OK [http://test.host/user/login]
+  [4;36;1mSQL (0.000150)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000059)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.000280)[0m   [0;1mSELECT * FROM users WHERE (users.`id` = 1) [0m
+
+
+Processing UserController#login (for 0.0.0.0 at 2009-09-15 13:25:35) [POST]
+  Session ID: 
+  Parameters: {"user"=>{"screen_name"=>"millikan", "password"=>"electron"}, "action"=>"login", "controller"=>"user"}
+  [4;35;1mUser Load (0.000938)[0m   [0mSELECT * FROM users WHERE (users.`screen_name` = 'millikan' AND users.`password` = 'electron') LIMIT 1[0m
+Cookie set: remember_me=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT
+Cookie set: authorization_token=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT
+Redirected to http://test.host/user
+Completed in 0.00180 (555 reqs/sec) | DB: 0.00143 (79%) | 302 Found [http://test.host/user/login?user=passwordelectronscreen_namemillikan]
+  [4;36;1mSQL (0.000118)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000070)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.000209)[0m   [0;1mSELECT * FROM users WHERE (users.`id` = 1) [0m
+
+
+Processing UserController#login (for 0.0.0.0 at 2009-09-15 13:25:35) [POST]
+  Session ID: 
+  Parameters: {"user"=>{"screen_name"=>"millikan", "password"=>"electron"}, "action"=>"login", "controller"=>"user"}
+  [4;35;1mUser Load (0.000194)[0m   [0mSELECT * FROM users WHERE (users.`screen_name` = 'millikan' AND users.`password` = 'electron') LIMIT 1[0m
+Cookie set: remember_me=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT
+Cookie set: authorization_token=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT
+Redirected to http://test.host/user
+Completed in 0.00094 (1060 reqs/sec) | DB: 0.00059 (62%) | 302 Found [http://test.host/user/login?user=passwordelectronscreen_namemillikan]
+
+
+Processing UserController#logout (for 0.0.0.0 at 2009-09-15 13:25:35) [GET]
+  Session ID: 
+  Parameters: {"action"=>"logout", "controller"=>"user"}
+Cookie set: authorization_token=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT
+Redirected to http://test.host/
+Completed in 0.00026 (3905 reqs/sec) | DB: 0.00000 (0%) | 302 Found [http://test.host/user/login?user=passwordelectronscreen_namemillikan]
+  [4;36;1mSQL (0.000099)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000085)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.000187)[0m   [0;1mSELECT * FROM users WHERE (users.`id` = 1) [0m
+
+
+Processing UserController#index (for 0.0.0.0 at 2009-09-15 13:25:35) [GET]
+  Session ID: 
+  Parameters: {"action"=>"index", "controller"=>"user"}
+Rendering  within layouts/application
+Rendering user/index
+Completed in 0.00185 (541 reqs/sec) | Rendering: 0.00169 (91%) | DB: 0.00037 (20%) | 200 OK [http://test.host/user]
+  [4;35;1mSQL (0.000135)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000057)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.000240)[0m   [0mSELECT * FROM users WHERE (users.`id` = 1) [0m
+
+
+Processing UserController#index (for 0.0.0.0 at 2009-09-15 13:25:35) [GET]
+  Session ID: 
+  Parameters: {"action"=>"index", "controller"=>"user"}
+Redirected to http://test.host/user/login
+Filter chain halted as [#<ActionController::Filters::ClassMethods::SymbolFilter:0x235d264 @filter=:protect>] returned false.
+Completed in 0.00024 (4165 reqs/sec) | DB: 0.00043 (179%) | 302 Found [http://test.host/user]
+
+
+Processing UserController#register (for 0.0.0.0 at 2009-09-15 13:25:35) [POST]
+  Session ID: 
+  Parameters: {"user"=>{"screen_name"=>"new_screen_name", "password"=>"long_enough_password", "email"=>"valid@example.com"}, "action"=>"register", "controller"=>"user"}
+  [4;36;1mUser Load (0.000226)[0m   [0;1mSELECT * FROM users WHERE (users.screen_name = 'new_screen_name') LIMIT 1[0m
+  [4;35;1mUser Load (0.000150)[0m   [0mSELECT * FROM users WHERE (users.email = 'valid@example.com') LIMIT 1[0m
+  [4;36;1mSQL (0.000160)[0m   [0;1mINSERT INTO users (`authorization_token`, `updated_at`, `screen_name`, `password`, `created_at`, `email`) VALUES(NULL, '2009-09-15 13:25:35', 'new_screen_name', 'long_enough_password', '2009-09-15 13:25:35', 'valid@example.com')[0m
+Redirected to http://test.host/user
+Completed in 0.00225 (444 reqs/sec) | DB: 0.00054 (23%) | 302 Found [http://test.host/user]
+  [4;35;1mSQL (0.000563)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000062)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.000216)[0m   [0mSELECT * FROM users WHERE (users.`id` = 1) [0m
+
+
+Processing UserController#register (for 0.0.0.0 at 2009-09-15 13:25:35) [POST]
+  Session ID: 
+  Parameters: {"user"=>{"screen_name"=>"aa/noyes", "password"=>"sun", "email"=>"anoyes@example,com"}, "action"=>"register", "controller"=>"user"}
+  [4;36;1mUser Load (0.000181)[0m   [0;1mSELECT * FROM users WHERE (users.screen_name = 'aa/noyes') LIMIT 1[0m
+  [4;35;1mUser Load (0.000142)[0m   [0mSELECT * FROM users WHERE (users.email = 'anoyes@example,com') LIMIT 1[0m
+Rendering  within layouts/application
+Rendering user/register
+Completed in 0.00521 (191 reqs/sec) | Rendering: 0.00400 (76%) | DB: 0.00116 (22%) | 200 OK [http://test.host/user/register?user=passwordsunemailanoyes%40example%2Ccomscreen_nameaa%2Fnoyes]
+  [4;36;1mSQL (0.000152)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000058)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.000258)[0m   [0;1mSELECT * FROM users WHERE (users.`id` = 1) [0m
+
+
+Processing UserController#register (for 0.0.0.0 at 2009-09-15 13:25:35) [GET]
+  Session ID: 
+  Parameters: {"action"=>"register", "controller"=>"user"}
+Rendering  within layouts/application
+Rendering user/register
+Completed in 0.00237 (422 reqs/sec) | Rendering: 0.00226 (95%) | DB: 0.00047 (19%) | 200 OK [http://test.host/user/register]
+  [4;35;1mSQL (0.000150)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000057)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.000248)[0m   [0mSELECT * FROM users WHERE (users.`id` = 1) [0m
+
+
+Processing UserController#register (for 0.0.0.0 at 2009-09-15 13:25:35) [POST]
+  Session ID: 
+  Parameters: {"user"=>{"screen_name"=>"new_screen_name", "password"=>"long_enough_password", "email"=>"valid@example.com"}, "action"=>"register", "controller"=>"user"}
+  [4;36;1mUser Load (0.000185)[0m   [0;1mSELECT * FROM users WHERE (users.screen_name = 'new_screen_name') LIMIT 1[0m
+  [4;35;1mUser Load (0.000139)[0m   [0mSELECT * FROM users WHERE (users.email = 'valid@example.com') LIMIT 1[0m
+  [4;36;1mSQL (0.000155)[0m   [0;1mINSERT INTO users (`authorization_token`, `updated_at`, `screen_name`, `password`, `created_at`, `email`) VALUES(NULL, '2009-09-15 13:25:35', 'new_screen_name', 'long_enough_password', '2009-09-15 13:25:35', 'valid@example.com')[0m
+Redirected to http://test.host/user
+Completed in 0.00218 (459 reqs/sec) | DB: 0.00093 (42%) | 302 Found [http://test.host/user/register?user=passwordlong_enough_passwordemailvalid%40example.comscreen_namenew_screen_name]
+  [4;35;1mUser Load (0.000179)[0m   [0mSELECT * FROM users WHERE (users.`screen_name` = 'new_screen_name' AND users.`password` = 'long_enough_password') LIMIT 1[0m
+  [4;36;1mSQL (0.000526)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.000151)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000098)[0m   [0mBEGIN[0m
+  [4;36;1mUser Columns (0.001571)[0m   [0;1mSHOW FIELDS FROM users[0m
+  [4;35;1mUser Load (0.000404)[0m   [0mSELECT * FROM users WHERE (users.`id` = 1) [0m
+  [4;36;1mUser Load (0.000169)[0m   [0;1mSELECT * FROM users WHERE (users.`id` = 2) [0m
+  [4;35;1mUser Load (0.000290)[0m   [0mSELECT * FROM users WHERE (users.screen_name = 'millikan' AND users.id <> 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.000262)[0m   [0;1mSELECT * FROM users WHERE (users.email = 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaram@example.com' AND users.id <> 1) LIMIT 1[0m
+  [4;35;1mSQL (0.000081)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000101)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.000198)[0m   [0mSELECT * FROM users WHERE (users.`id` = 1) [0m
+  [4;36;1mUser Load (0.000158)[0m   [0;1mSELECT * FROM users WHERE (users.`id` = 2) [0m
+  [4;35;1mUser Load (0.000231)[0m   [0mSELECT * FROM users WHERE (users.screen_name = 'millikan' AND users.id <> 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.000202)[0m   [0;1mSELECT * FROM users WHERE (users.email = 'foobar@example.c' AND users.id <> 1) LIMIT 1[0m
+  [4;35;1mUser Load (0.000218)[0m   [0mSELECT * FROM users WHERE (users.screen_name = 'millikan' AND users.id <> 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.000209)[0m   [0;1mSELECT * FROM users WHERE (users.email = '@example.com' AND users.id <> 1) LIMIT 1[0m
+  [4;35;1mUser Load (0.000206)[0m   [0mSELECT * FROM users WHERE (users.screen_name = 'millikan' AND users.id <> 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.000230)[0m   [0;1mSELECT * FROM users WHERE (users.email = 'f@com' AND users.id <> 1) LIMIT 1[0m
+  [4;35;1mUser Load (0.000206)[0m   [0mSELECT * FROM users WHERE (users.screen_name = 'millikan' AND users.id <> 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.000202)[0m   [0;1mSELECT * FROM users WHERE (users.email = 'foo@bar..com' AND users.id <> 1) LIMIT 1[0m
+  [4;35;1mUser Load (0.000308)[0m   [0mSELECT * FROM users WHERE (users.screen_name = 'millikan' AND users.id <> 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.000236)[0m   [0;1mSELECT * FROM users WHERE (users.email = 'foobar@example.infod' AND users.id <> 1) LIMIT 1[0m
+  [4;35;1mUser Load (0.000211)[0m   [0mSELECT * FROM users WHERE (users.screen_name = 'millikan' AND users.id <> 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.000211)[0m   [0;1mSELECT * FROM users WHERE (users.email = 'foobar.example.com' AND users.id <> 1) LIMIT 1[0m
+  [4;35;1mUser Load (0.000207)[0m   [0mSELECT * FROM users WHERE (users.screen_name = 'millikan' AND users.id <> 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.000247)[0m   [0;1mSELECT * FROM users WHERE (users.email = 'foo,@example.com' AND users.id <> 1) LIMIT 1[0m
+  [4;35;1mUser Load (0.000206)[0m   [0mSELECT * FROM users WHERE (users.screen_name = 'millikan' AND users.id <> 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.000201)[0m   [0;1mSELECT * FROM users WHERE (users.email = 'foo@ex(ample.com' AND users.id <> 1) LIMIT 1[0m
+  [4;35;1mUser Load (0.000237)[0m   [0mSELECT * FROM users WHERE (users.screen_name = 'millikan' AND users.id <> 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.000214)[0m   [0;1mSELECT * FROM users WHERE (users.email = 'foo@example,com' AND users.id <> 1) LIMIT 1[0m
+  [4;35;1mSQL (0.000095)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000096)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.000191)[0m   [0mSELECT * FROM users WHERE (users.`id` = 1) [0m
+  [4;36;1mUser Load (0.000154)[0m   [0;1mSELECT * FROM users WHERE (users.`id` = 2) [0m
+  [4;35;1mUser Load (0.000215)[0m   [0mSELECT * FROM users WHERE (users.screen_name = 'millikan' AND users.id <> 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.000215)[0m   [0;1mSELECT * FROM users WHERE (users.email = 'foo.bar_1-9@baz-quux0.example.com' AND users.id <> 1) LIMIT 1[0m
+  [4;35;1mUser Load (0.000225)[0m   [0mSELECT * FROM users WHERE (users.screen_name = 'millikan' AND users.id <> 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.000203)[0m   [0;1mSELECT * FROM users WHERE (users.email = 'foo.bar_1-9@baz-quux0.example.org' AND users.id <> 1) LIMIT 1[0m
+  [4;35;1mUser Load (0.000205)[0m   [0mSELECT * FROM users WHERE (users.screen_name = 'millikan' AND users.id <> 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.000201)[0m   [0;1mSELECT * FROM users WHERE (users.email = 'foo.bar_1-9@baz-quux0.example.net' AND users.id <> 1) LIMIT 1[0m
+  [4;35;1mUser Load (0.000223)[0m   [0mSELECT * FROM users WHERE (users.screen_name = 'millikan' AND users.id <> 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.000216)[0m   [0;1mSELECT * FROM users WHERE (users.email = 'foo.bar_1-9@baz-quux0.example.edu' AND users.id <> 1) LIMIT 1[0m
+  [4;35;1mUser Load (0.000215)[0m   [0mSELECT * FROM users WHERE (users.screen_name = 'millikan' AND users.id <> 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.000209)[0m   [0;1mSELECT * FROM users WHERE (users.email = 'foo.bar_1-9@baz-quux0.example.es' AND users.id <> 1) LIMIT 1[0m
+  [4;35;1mUser Load (0.000209)[0m   [0mSELECT * FROM users WHERE (users.screen_name = 'millikan' AND users.id <> 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.000207)[0m   [0;1mSELECT * FROM users WHERE (users.email = 'foo.bar_1-9@baz-quux0.example.jp' AND users.id <> 1) LIMIT 1[0m
+  [4;35;1mUser Load (0.000207)[0m   [0mSELECT * FROM users WHERE (users.screen_name = 'millikan' AND users.id <> 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.000225)[0m   [0;1mSELECT * FROM users WHERE (users.email = 'foo.bar_1-9@baz-quux0.example.info' AND users.id <> 1) LIMIT 1[0m
+  [4;35;1mSQL (0.000079)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000095)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.000188)[0m   [0mSELECT * FROM users WHERE (users.`id` = 1) [0m
+  [4;36;1mUser Load (0.000159)[0m   [0;1mSELECT * FROM users WHERE (users.`id` = 2) [0m
+  [4;35;1mUser Load (0.000243)[0m   [0mSELECT * FROM users WHERE (users.screen_name = 'millikan' AND users.id <> 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.000200)[0m   [0;1mSELECT * FROM users WHERE (users.email = 'ram@example.com' AND users.id <> 1) LIMIT 1[0m
+  [4;35;1mUser Load (0.000223)[0m   [0mSELECT * FROM users WHERE (users.screen_name = 'millikan' AND users.id <> 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.000256)[0m   [0;1mSELECT * FROM users WHERE (users.email = 'ram@example.com' AND users.id <> 1) LIMIT 1[0m
+  [4;35;1mSQL (0.000091)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000063)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.000176)[0m   [0mSELECT * FROM users WHERE (users.`id` = 1) [0m
+  [4;36;1mUser Load (0.000150)[0m   [0;1mSELECT * FROM users WHERE (users.`id` = 2) [0m
+  [4;35;1mUser Load (0.000221)[0m   [0mSELECT * FROM users WHERE (users.screen_name = 'millikan' AND users.id <> 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.000209)[0m   [0;1mSELECT * FROM users WHERE (users.email = 'ram@example.com' AND users.id <> 1) LIMIT 1[0m
+  [4;35;1mUser Load (0.000219)[0m   [0mSELECT * FROM users WHERE (users.screen_name = 'millikan' AND users.id <> 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.000214)[0m   [0;1mSELECT * FROM users WHERE (users.email = 'ram@example.com' AND users.id <> 1) LIMIT 1[0m
+  [4;35;1mSQL (0.000090)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000066)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.000177)[0m   [0mSELECT * FROM users WHERE (users.`id` = 1) [0m
+  [4;36;1mUser Load (0.000151)[0m   [0;1mSELECT * FROM users WHERE (users.`id` = 2) [0m
+  [4;35;1mUser Load (0.000239)[0m   [0mSELECT * FROM users WHERE (users.screen_name = 'aaaaaaaaaaaaaaaaaaaaa' AND users.id <> 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.000211)[0m   [0;1mSELECT * FROM users WHERE (users.email = 'ram@example.com' AND users.id <> 1) LIMIT 1[0m
+  [4;35;1mUser Load (0.000211)[0m   [0mSELECT * FROM users WHERE (users.screen_name = 'aaaaaaaaaaaaaaaaaaaa' AND users.id <> 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.000207)[0m   [0;1mSELECT * FROM users WHERE (users.email = 'ram@example.com' AND users.id <> 1) LIMIT 1[0m
+  [4;35;1mSQL (0.000098)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000063)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.000173)[0m   [0mSELECT * FROM users WHERE (users.`id` = 1) [0m
+  [4;36;1mUser Load (0.000167)[0m   [0;1mSELECT * FROM users WHERE (users.`id` = 2) [0m
+  [4;35;1mUser Load (0.000233)[0m   [0mSELECT * FROM users WHERE (users.screen_name = 'aaa' AND users.id <> 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.000210)[0m   [0;1mSELECT * FROM users WHERE (users.email = 'ram@example.com' AND users.id <> 1) LIMIT 1[0m
+  [4;35;1mUser Load (0.000212)[0m   [0mSELECT * FROM users WHERE (users.screen_name = 'aaaa' AND users.id <> 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.000214)[0m   [0;1mSELECT * FROM users WHERE (users.email = 'ram@example.com' AND users.id <> 1) LIMIT 1[0m
+  [4;35;1mSQL (0.000114)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000088)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.000272)[0m   [0mSELECT * FROM users WHERE (users.`id` = 1) [0m
+  [4;36;1mUser Load (0.000157)[0m   [0;1mSELECT * FROM users WHERE (users.`id` = 2) [0m
+  [4;35;1mUser Load (0.000259)[0m   [0mSELECT * FROM users WHERE (users.screen_name = 'rails/rocks' AND users.id <> 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.000211)[0m   [0;1mSELECT * FROM users WHERE (users.email = 'ram@example.com' AND users.id <> 1) LIMIT 1[0m
+  [4;35;1mUser Load (0.000230)[0m   [0mSELECT * FROM users WHERE (users.screen_name = 'web2.0' AND users.id <> 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.000212)[0m   [0;1mSELECT * FROM users WHERE (users.email = 'ram@example.com' AND users.id <> 1) LIMIT 1[0m
+  [4;35;1mUser Load (0.000219)[0m   [0mSELECT * FROM users WHERE (users.screen_name = 'javscript:something' AND users.id <> 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.000224)[0m   [0;1mSELECT * FROM users WHERE (users.email = 'ram@example.com' AND users.id <> 1) LIMIT 1[0m
+  [4;35;1mSQL (0.000093)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000095)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.000183)[0m   [0mSELECT * FROM users WHERE (users.`id` = 1) [0m
+  [4;36;1mUser Load (0.000160)[0m   [0;1mSELECT * FROM users WHERE (users.`id` = 2) [0m
+  [4;35;1mUser Load (0.000318)[0m   [0mSELECT * FROM users WHERE (users.screen_name = 'aure' AND users.id <> 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.000232)[0m   [0;1mSELECT * FROM users WHERE (users.email = 'ram@example.com' AND users.id <> 1) LIMIT 1[0m
+  [4;35;1mUser Load (0.000231)[0m   [0mSELECT * FROM users WHERE (users.screen_name = 'michael' AND users.id <> 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.000211)[0m   [0;1mSELECT * FROM users WHERE (users.email = 'ram@example.com' AND users.id <> 1) LIMIT 1[0m
+  [4;35;1mUser Load (0.000217)[0m   [0mSELECT * FROM users WHERE (users.screen_name = 'web_20' AND users.id <> 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.000208)[0m   [0;1mSELECT * FROM users WHERE (users.email = 'ram@example.com' AND users.id <> 1) LIMIT 1[0m
+  [4;35;1mSQL (0.000098)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000065)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.000183)[0m   [0mSELECT * FROM users WHERE (users.`id` = 1) [0m
+  [4;36;1mUser Load (0.000155)[0m   [0;1mSELECT * FROM users WHERE (users.`id` = 2) [0m
+  [4;35;1mUser Load (0.000164)[0m   [0mSELECT * FROM users WHERE (users.screen_name = 'millikan') LIMIT 1[0m
+  [4;36;1mUser Load (0.000146)[0m   [0;1mSELECT * FROM users WHERE (users.email = 'ram@example.com') LIMIT 1[0m
+  [4;35;1mSQL (0.000077)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000067)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.000202)[0m   [0mSELECT * FROM users WHERE (users.`id` = 1) [0m
+  [4;36;1mUser Load (0.000187)[0m   [0;1mSELECT * FROM users WHERE (users.`id` = 2) [0m
+  [4;35;1mUser Load (0.000245)[0m   [0mSELECT * FROM users WHERE (users.screen_name = 'aa/noyes' AND users.id <> 2) LIMIT 1[0m
+  [4;36;1mUser Load (0.000211)[0m   [0;1mSELECT * FROM users WHERE (users.email = 'anoyes@example,com' AND users.id <> 2) LIMIT 1[0m
+  [4;35;1mSQL (0.000089)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000063)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.000173)[0m   [0mSELECT * FROM users WHERE (users.`id` = 1) [0m
+  [4;36;1mUser Load (0.000149)[0m   [0;1mSELECT * FROM users WHERE (users.`id` = 2) [0m
+  [4;35;1mUser Load (0.000217)[0m   [0mSELECT * FROM users WHERE (users.screen_name = 'millikan' AND users.id <> 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.000210)[0m   [0;1mSELECT * FROM users WHERE (users.email = 'ram@example.com' AND users.id <> 1) LIMIT 1[0m
+  [4;35;1mSQL (0.000087)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000150)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000074)[0m   [0mBEGIN[0m
+
+
+Processing SiteController#about (for 0.0.0.0 at 2009-09-16 18:32:51) [GET]
+  Session ID: 
+  Parameters: {"action"=>"about", "controller"=>"site"}
+Rendering  within layouts/application
+Rendering site/about
+Completed in 0.09449 (10 reqs/sec) | Rendering: 0.09382 (99%) | DB: 0.00022 (0%) | 200 OK [http://test.host/site/about]
+  [4;36;1mSQL (0.000136)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000079)[0m   [0mBEGIN[0m
+
+
+Processing SiteController#help (for 0.0.0.0 at 2009-09-16 18:32:51) [GET]
+  Session ID: 
+  Parameters: {"action"=>"help", "controller"=>"site"}
+Rendering  within layouts/application
+Rendering site/help
+Completed in 0.02051 (48 reqs/sec) | Rendering: 0.02039 (99%) | DB: 0.00021 (1%) | 200 OK [http://test.host/site/help]
+  [4;36;1mSQL (0.000136)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000079)[0m   [0mBEGIN[0m
+
+
+Processing SiteController#index (for 0.0.0.0 at 2009-09-16 18:32:51) [GET]
+  Session ID: 
+  Parameters: {"action"=>"index", "controller"=>"site"}
+Rendering  within layouts/application
+Rendering site/index
+Completed in 0.01661 (60 reqs/sec) | Rendering: 0.01649 (99%) | DB: 0.00022 (1%) | 200 OK [http://test.host/]
+  [4;36;1mSQL (0.000137)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000081)[0m   [0mBEGIN[0m
+
+
+Processing SiteController#index (for 0.0.0.0 at 2009-09-16 18:32:51) [GET]
+  Session ID: 
+  Parameters: {"action"=>"index", "controller"=>"site"}
+Rendering  within layouts/application
+Rendering site/index
+Completed in 0.00189 (527 reqs/sec) | Rendering: 0.00180 (94%) | DB: 0.00022 (11%) | 200 OK [http://test.host/]
+  [4;36;1mSQL (0.000094)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000101)[0m   [0mBEGIN[0m
+  [4;36;1mUser Columns (0.001622)[0m   [0;1mSHOW FIELDS FROM users[0m
+  [4;35;1mUser Load (0.000615)[0m   [0mSELECT * FROM users WHERE (users.`id` = 1) [0m
+
+
+Processing UserController#index (for 0.0.0.0 at 2009-09-16 18:32:51) [GET]
+  Session ID: 
+  Parameters: {"action"=>"index", "controller"=>"user"}
+Rendering  within layouts/application
+Rendering user/index
+Completed in 0.03104 (32 reqs/sec) | Rendering: 0.03024 (97%) | DB: 0.00243 (7%) | 200 OK [http://test.host/user]
+  [4;36;1mSQL (0.000171)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000102)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.000277)[0m   [0;1mSELECT * FROM users WHERE (users.`id` = 1) [0m
+
+
+Processing UserController#index (for 0.0.0.0 at 2009-09-16 18:32:51) [GET]
+  Session ID: 
+  Parameters: {"action"=>"index", "controller"=>"user"}
+Redirected to http://test.host/user/login
+Filter chain halted as [#<ActionController::Filters::ClassMethods::SymbolFilter:0x235d1ec @filter=:protect>] returned false.
+Completed in 0.00029 (3486 reqs/sec) | DB: 0.00055 (191%) | 302 Found [http://test.host/user]
+  [4;35;1mSQL (0.000095)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000064)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.000217)[0m   [0mSELECT * FROM users WHERE (users.`id` = 1) [0m
+
+
+Processing UserController#login (for 0.0.0.0 at 2009-09-16 18:32:51) [POST]
+  Session ID: 
+  Parameters: {"user"=>{"screen_name"=>"no such user", "password"=>"electron"}, "action"=>"login", "controller"=>"user"}
+  [4;36;1mUser Load (0.000226)[0m   [0;1mSELECT * FROM users WHERE (users.`screen_name` = 'no such user' AND users.`password` = 'electron') LIMIT 1[0m
+Rendering  within layouts/application
+Rendering user/login
+Completed in 0.01557 (64 reqs/sec) | Rendering: 0.01473 (94%) | DB: 0.00060 (3%) | 200 OK [http://test.host/user/login?user=passwordelectronscreen_nameno+such+user]
+  [4;35;1mSQL (0.000165)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000080)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.000296)[0m   [0mSELECT * FROM users WHERE (users.`id` = 1) [0m
+
+
+Processing UserController#login (for 0.0.0.0 at 2009-09-16 18:32:51) [POST]
+  Session ID: 
+  Parameters: {"user"=>{"screen_name"=>"millikan", "password"=>"electronbaz"}, "action"=>"login", "controller"=>"user"}
+  [4;36;1mUser Load (0.000224)[0m   [0;1mSELECT * FROM users WHERE (users.`screen_name` = 'millikan' AND users.`password` = 'electronbaz') LIMIT 1[0m
+Rendering  within layouts/application
+Rendering user/login
+Completed in 0.00356 (280 reqs/sec) | Rendering: 0.00282 (79%) | DB: 0.00077 (21%) | 200 OK [http://test.host/user/login?user=passwordelectronbazscreen_namemillikan]
+  [4;35;1mSQL (0.000104)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000077)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.000244)[0m   [0mSELECT * FROM users WHERE (users.`id` = 1) [0m
+
+
+Processing UserController#index (for 0.0.0.0 at 2009-09-16 18:32:51) [GET]
+  Session ID: 
+  Parameters: {"action"=>"index", "controller"=>"user"}
+Redirected to http://test.host/user/login
+Filter chain halted as [#<ActionController::Filters::ClassMethods::SymbolFilter:0x235d1ec @filter=:protect>] returned false.
+Completed in 0.00028 (3612 reqs/sec) | DB: 0.00042 (153%) | 302 Found [http://test.host/user]
+
+
+Processing UserController#login (for 0.0.0.0 at 2009-09-16 18:32:51) [POST]
+  Session ID: 
+  Parameters: {"user"=>{"screen_name"=>"millikan", "password"=>"electron"}, "action"=>"login", "controller"=>"user"}
+  [4;36;1mUser Load (0.000247)[0m   [0;1mSELECT * FROM users WHERE (users.`screen_name` = 'millikan' AND users.`password` = 'electron') LIMIT 1[0m
+Cookie set: remember_me=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT
+Cookie set: authorization_token=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT
+Redirected to http://test.host/user
+Completed in 0.00094 (1065 reqs/sec) | DB: 0.00025 (26%) | 302 Found [http://test.host/user]
+  [4;35;1mSQL (0.000133)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000097)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.000253)[0m   [0mSELECT * FROM users WHERE (users.`id` = 1) [0m
+
+
+Processing UserController#login (for 0.0.0.0 at 2009-09-16 18:32:51) [GET]
+  Session ID: 
+  Parameters: {"action"=>"login", "controller"=>"user"}
+Rendering  within layouts/application
+Rendering user/login
+Completed in 0.00303 (330 reqs/sec) | Rendering: 0.00283 (93%) | DB: 0.00048 (15%) | 200 OK [http://test.host/user/login]
+  [4;36;1mSQL (0.000161)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000067)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.000266)[0m   [0;1mSELECT * FROM users WHERE (users.`id` = 1) [0m
+
+
+Processing UserController#login (for 0.0.0.0 at 2009-09-16 18:32:51) [POST]
+  Session ID: 
+  Parameters: {"user"=>{"screen_name"=>"millikan", "password"=>"electron"}, "action"=>"login", "controller"=>"user"}
+  [4;35;1mUser Load (0.000212)[0m   [0mSELECT * FROM users WHERE (users.`screen_name` = 'millikan' AND users.`password` = 'electron') LIMIT 1[0m
+Cookie set: remember_me=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT
+Cookie set: authorization_token=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT
+Redirected to http://test.host/user
+Completed in 0.00104 (956 reqs/sec) | DB: 0.00071 (67%) | 302 Found [http://test.host/user/login?user=passwordelectronscreen_namemillikan]
+  [4;36;1mSQL (0.000094)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000061)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.000212)[0m   [0;1mSELECT * FROM users WHERE (users.`id` = 1) [0m
+
+
+Processing UserController#login (for 0.0.0.0 at 2009-09-16 18:32:51) [POST]
+  Session ID: 
+  Parameters: {"user"=>{"screen_name"=>"millikan", "password"=>"electron"}, "action"=>"login", "controller"=>"user"}
+  [4;35;1mUser Load (0.000253)[0m   [0mSELECT * FROM users WHERE (users.`screen_name` = 'millikan' AND users.`password` = 'electron') LIMIT 1[0m
+Cookie set: remember_me=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT
+Cookie set: authorization_token=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT
+Redirected to http://test.host/user
+Completed in 0.00109 (919 reqs/sec) | DB: 0.00062 (57%) | 302 Found [http://test.host/user/login?user=passwordelectronscreen_namemillikan]
+
+
+Processing UserController#logout (for 0.0.0.0 at 2009-09-16 18:32:51) [GET]
+  Session ID: 
+  Parameters: {"action"=>"logout", "controller"=>"user"}
+Cookie set: authorization_token=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT
+Redirected to http://test.host/
+Completed in 0.00028 (3597 reqs/sec) | DB: 0.00000 (0%) | 302 Found [http://test.host/user/login?user=passwordelectronscreen_namemillikan]
+  [4;36;1mSQL (0.000124)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000063)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.000209)[0m   [0;1mSELECT * FROM users WHERE (users.`id` = 1) [0m
+
+
+Processing UserController#index (for 0.0.0.0 at 2009-09-16 18:32:51) [GET]
+  Session ID: 
+  Parameters: {"action"=>"index", "controller"=>"user"}
+Rendering  within layouts/application
+Rendering user/index
+Completed in 0.00208 (480 reqs/sec) | Rendering: 0.00194 (93%) | DB: 0.00040 (19%) | 200 OK [http://test.host/user]
+  [4;35;1mSQL (0.000149)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000059)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.000237)[0m   [0mSELECT * FROM users WHERE (users.`id` = 1) [0m
+
+
+Processing UserController#index (for 0.0.0.0 at 2009-09-16 18:32:51) [GET]
+  Session ID: 
+  Parameters: {"action"=>"index", "controller"=>"user"}
+Redirected to http://test.host/user/login
+Filter chain halted as [#<ActionController::Filters::ClassMethods::SymbolFilter:0x235d1ec @filter=:protect>] returned false.
+Completed in 0.00024 (4148 reqs/sec) | DB: 0.00044 (184%) | 302 Found [http://test.host/user]
+
+
+Processing UserController#register (for 0.0.0.0 at 2009-09-16 18:32:51) [POST]
+  Session ID: 
+  Parameters: {"user"=>{"screen_name"=>"new_screen_name", "password"=>"long_enough_password", "email"=>"valid@example.com"}, "action"=>"register", "controller"=>"user"}
+  [4;36;1mUser Load (0.000224)[0m   [0;1mSELECT * FROM users WHERE (users.screen_name = 'new_screen_name') LIMIT 1[0m
+  [4;35;1mUser Load (0.000158)[0m   [0mSELECT * FROM users WHERE (users.email = 'valid@example.com') LIMIT 1[0m
+  [4;36;1mSQL (0.000158)[0m   [0;1mINSERT INTO users (`authorization_token`, `updated_at`, `screen_name`, `password`, `created_at`, `email`) VALUES(NULL, '2009-09-16 18:32:51', 'new_screen_name', 'long_enough_password', '2009-09-16 18:32:51', 'valid@example.com')[0m
+Redirected to http://test.host/user
+Completed in 0.00222 (450 reqs/sec) | DB: 0.00054 (24%) | 302 Found [http://test.host/user]
+  [4;35;1mSQL (0.001019)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000065)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.000246)[0m   [0mSELECT * FROM users WHERE (users.`id` = 1) [0m
+
+
+Processing UserController#register (for 0.0.0.0 at 2009-09-16 18:32:51) [POST]
+  Session ID: 
+  Parameters: {"user"=>{"screen_name"=>"aa/noyes", "password"=>"sun", "email"=>"anoyes@example,com"}, "action"=>"register", "controller"=>"user"}
+  [4;36;1mUser Load (0.000196)[0m   [0;1mSELECT * FROM users WHERE (users.screen_name = 'aa/noyes') LIMIT 1[0m
+  [4;35;1mUser Load (0.000145)[0m   [0mSELECT * FROM users WHERE (users.email = 'anoyes@example,com') LIMIT 1[0m
+Rendering  within layouts/application
+Rendering user/register
+Completed in 0.02341 (42 reqs/sec) | Rendering: 0.02217 (94%) | DB: 0.00167 (7%) | 200 OK [http://test.host/user/register?user=passwordsunemailanoyes%40example%2Ccomscreen_nameaa%2Fnoyes]
+  [4;36;1mSQL (0.000160)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000091)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.000270)[0m   [0;1mSELECT * FROM users WHERE (users.`id` = 1) [0m
+
+
+Processing UserController#register (for 0.0.0.0 at 2009-09-16 18:32:51) [GET]
+  Session ID: 
+  Parameters: {"action"=>"register", "controller"=>"user"}
+Rendering  within layouts/application
+Rendering user/register
+Completed in 0.00240 (416 reqs/sec) | Rendering: 0.00229 (95%) | DB: 0.00052 (21%) | 200 OK [http://test.host/user/register]
+  [4;35;1mSQL (0.000143)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000058)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.000249)[0m   [0mSELECT * FROM users WHERE (users.`id` = 1) [0m
+
+
+Processing UserController#register (for 0.0.0.0 at 2009-09-16 18:32:51) [POST]
+  Session ID: 
+  Parameters: {"user"=>{"screen_name"=>"new_screen_name", "password"=>"long_enough_password", "email"=>"valid@example.com"}, "action"=>"register", "controller"=>"user"}
+  [4;36;1mUser Load (0.000193)[0m   [0;1mSELECT * FROM users WHERE (users.screen_name = 'new_screen_name') LIMIT 1[0m
+  [4;35;1mUser Load (0.000140)[0m   [0mSELECT * FROM users WHERE (users.email = 'valid@example.com') LIMIT 1[0m
+  [4;36;1mSQL (0.013576)[0m   [0;1mINSERT INTO users (`authorization_token`, `updated_at`, `screen_name`, `password`, `created_at`, `email`) VALUES(NULL, '2009-09-16 18:32:51', 'new_screen_name', 'long_enough_password', '2009-09-16 18:32:51', 'valid@example.com')[0m
+Redirected to http://test.host/user
+Completed in 0.01581 (63 reqs/sec) | DB: 0.01436 (90%) | 302 Found [http://test.host/user/register?user=passwordlong_enough_passwordemailvalid%40example.comscreen_namenew_screen_name]
+  [4;35;1mUser Load (0.000318)[0m   [0mSELECT * FROM users WHERE (users.`screen_name` = 'new_screen_name' AND users.`password` = 'long_enough_password') LIMIT 1[0m
+  [4;36;1mSQL (0.000726)[0m   [0;1mROLLBACK[0m
