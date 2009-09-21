@@ -4847,3 +4847,24 @@ Processing UserController#login (for 127.0.0.1 at 2009-09-19 14:13:07) [GET]
 Rendering  within layouts/application
 Rendering user/login
 Completed in 0.03131 (31 reqs/sec) | Rendering: 0.02560 (81%) | DB: 0.00141 (4%) | 200 OK [http://localhost/user/login]
+  [4;36;1mSQL (0.000155)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.015515)[0m   [0mSELECT * FROM schema_info[0m
+  [4;36;1mSQL (0.026024)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.001771)[0m   [0mSHOW FIELDS FROM sessions[0m
+  [4;36;1mSQL (0.001143)[0m   [0;1mSHOW KEYS FROM sessions[0m
+  [4;35;1mSQL (0.001399)[0m   [0mSHOW FIELDS FROM users[0m
+  [4;36;1mSQL (0.000479)[0m   [0;1mSHOW KEYS FROM users[0m
+  [4;35;1mSQL (0.000106)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.134431)[0m   [0;1mDROP DATABASE IF EXISTS `rails_space_test`[0m
+  [4;35;1mSQL (0.000383)[0m   [0mCREATE DATABASE `rails_space_test`[0m
+  [4;36;1mSQL (0.000122)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: Unknown table 'sessions': DROP TABLE sessions[0m
+  [4;36;1mSQL (0.216782)[0m   [0;1mCREATE TABLE sessions (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `session_id` varchar(255) DEFAULT NULL, `data` text DEFAULT NULL, `updated_at` datetime DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.218857)[0m   [0mCREATE INDEX `index_sessions_on_session_id` ON sessions (`session_id`)[0m
+  [4;36;1mSQL (0.213013)[0m   [0;1mCREATE INDEX `index_sessions_on_updated_at` ON sessions (`updated_at`)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: Unknown table 'users': DROP TABLE users[0m
+  [4;36;1mSQL (0.123524)[0m   [0;1mCREATE TABLE users (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `screen_name` varchar(255) DEFAULT NULL, `email` varchar(255) DEFAULT NULL, `password` varchar(255) DEFAULT NULL, `created_at` datetime DEFAULT NULL, `updated_at` datetime DEFAULT NULL, `authorization_token` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.109190)[0m   [0mCREATE TABLE schema_info (version int(11))[0m
+  [4;36;1mSQL (0.000601)[0m   [0;1mINSERT INTO schema_info (version) VALUES(0)[0m
+  [4;35;1mSQL (0.009136)[0m   [0mSHOW FIELDS FROM schema_info[0m
+  [4;36;1mSQL (0.000635)[0m   [0;1mUPDATE schema_info SET version = 4[0m
